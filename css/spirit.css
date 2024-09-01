@@ -1,0 +1,1768 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+:root {
+   --paddingTop:100px;
+   --paddingBottom:100px
+
+}
+
+body {
+
+    font-family: "Work Sans", sans-serif;
+    background-color: aliceblue;
+    padding-top: 70px;
+
+
+    
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.header {
+    background-color: #FFFFF0;
+    position: fixed; /* Fix the header to the top of the page */
+    top: 0; /* Ensure the header sticks to the top */
+    left: 0; /* Align the header to the left edge */
+    width: 100%; /* Make sure the header spans the full width of the page */
+    z-index: 4000; /* Ensure the header stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    font-family: "Give You Glory", cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+.fa-solid {
+    color: black;
+}
+
+.header .main-links {
+    display: flex;
+}
+
+.megaMenu {
+    position: absolute;
+    z-index: 5000;
+    background-color: #0a2a4a;
+    padding: 20px;
+    color: white;
+    top: 80px;
+    display: none;
+    border-radius: 30px
+}
+
+.header ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+.header ul li:hover:before {
+    display: block;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black;
+    transition: 3ms;
+}
+
+.header .megaMenu a {
+    color: white;
+}
+
+.header .megaMenu li {
+    padding: 20px;
+}
+
+.header .login {
+    background-color: #AA0000;
+    width: 120px;
+    padding: 15px 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.header .login span {
+    font-size: 20px;
+    color: white;
+}
+
+.header ul li a:hover {
+    color: #D2122E;
+}
+
+.header .login:hover {
+    background-color: #D2122E;
+}
+
+.header .menu-option {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu-option span {
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    margin-top: 7px;
+    display: none;
+}
+
+
+
+
+.header .toggle {
+    position: absolute;
+    width: 80%; /* Make the toggle wider for better usability on mobile */
+    max-width: 300px; /* Limit the maximum width for larger screens */
+    background-color: #fef9f9; /* Slightly lighter background for better contrast */
+    right: -100%; /* Hide the toggle initially */
+    top: 80px;
+    height: auto;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+.header .toggle ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased space between list items */
+}
+
+.header .toggle ul li {
+    position: relative;
+    
+}
+
+.header .toggle ul li::after {
+    content: "";
+    position: absolute;
+    width: 100%; /* Make the line span the entire width of the toggle menu */
+    background-color: #ddd; /* Subtle divider color */
+    height: 1px; /* Thin divider line */
+    bottom: 0; /* Position the line at the bottom of the list item */
+    left: 0; 
+}
+
+
+.header .toggle ul li:last-child::after {
+    display: none; 
+}
+
+#signIn a{
+    color: orangered;
+}
+.header .toggle ul li a {
+    color: #22313f;
+    text-decoration: none;
+    font-size: 19px;
+    /* font-weight: bold; */
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.header .toggle ul li a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.header .menu-option span {
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.header .toggle.active {
+    right: 10px; /* Slightly offset from the right edge */
+}
+
+
+
+/***Landing page */
+
+.landing-page{
+
+
+background: url("../images/b2.jpg");
+background-size: cover;
+height: 600px;
+position: relative;
+padding-bottom: 100px;
+
+}
+
+
+
+
+.landing-page .landing-content{
+
+    position: absolute;
+
+    color: white;
+    display: inline-block;
+    top: 10%;
+}
+
+/* Target the first <p> element within .text */
+.text p:first-of-type {
+  color: #ccc;
+  font-size: 25px;
+}
+
+/* Target the second <p> element within .text */
+.text p:nth-of-type(2) {
+    font-size: 35px;
+    color: black;
+    line-height: 0.3px;
+ 
+}
+/* Target the 3 <p> element within .text */
+.text p:nth-of-type(3) {
+    font-size: 35px;
+   
+    color: #8bc34ae0;
+}
+
+/* Target the second <span> element within .text */
+.text span:nth-of-type(1) {
+  color: #ccc;
+}
+
+
+
+.landing-content .shop-button{
+
+    padding: 20px;
+    width: max-content;
+    padding-top: var(--paddingTop);
+
+}
+
+.shop-button a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+
+}
+.landing-content .shop-button button{
+
+    padding: 15px;
+    background-color: #DAA520;
+    border: transparent;
+    border-radius: 5px;
+    border: 1px solid tra;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+
+.landing-content .shop-button button:hover{
+
+background-color: red;
+}
+
+/* end of landing */
+
+
+/* start features */
+
+
+.features{
+padding-top: var(--paddingTop);
+padding-bottom: 100px;
+}
+
+.features .features-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px
+    ;
+}
+
+.features .features-icons .icons-box{
+    background-color: #e2dfd23d;
+    text-align: center;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.features-icons .icons-box img{
+
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.features-icons .icons-box p{
+    padding: 10px 5px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+/***Animations */
+
+.features .features-icons .icons-box:hover {
+    transform: translateY(-10px); /* Move the box upwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    background-color: #f5f5f5; /* Change background color */
+}
+
+/* Optional: Rotate and scale effect for the image on hover */
+.features .features-icons .icons-box:hover img {
+    transform: scale(1.1) rotate(5deg); /* Scale up and slightly rotate the image */
+}
+
+/* Optional: Change text color on hover */
+.features .features-icons .icons-box:hover p {
+    color: #333; /* Change text color */
+}
+
+
+
+
+/*******Start Feature Product*****/
+
+
+
+.feature-product{
+    padding-bottom: 100px;
+}
+
+
+
+h2 {
+    border: 2px solid black;
+    margin: 100px auto;
+    width: fit-content;
+    font-size: 30px;
+    padding: 15px 20px; /* Consistent padding */
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.3s ease; /* Smooth transition */
+    z-index: 2;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:#318CE7;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1; /* Ensure it's behind content */
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #318CE7;
+    border-radius: 50%;
+    right: -40px;
+    top: 50%;
+    z-index: -1; /* Ensure it's behind content */
+    transform: translateY(-50%);
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+}
+
+h2:hover::before {
+    animation: left-move 1.5s linear forwards;
+}
+
+h2:hover::after {
+    animation: right-move 1.5s linear forwards;
+}
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/* Vendor prefixes for better compatibility */
+@-webkit-keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+h2:hover::before {
+    -webkit-animation: left-move 1.5s linear forwards;
+}
+
+h2:hover::after {
+    -webkit-animation: right-move 1.5s linear forwards;
+}
+
+
+
+
+
+
+
+.feature-product .container p{
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1px;
+}
+
+
+.feature-product .container .feature-boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding-top: 50px;
+}
+
+ .box .img {
+    padding-top: 10px;
+    position: relative;
+}
+
+
+ .box .img i {
+    position: absolute;
+    right: 25px;
+    /* bottom: 0; */
+    font-size: 30px;
+    color: orange;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.box .img i:hover {
+    transform: scale(1.2);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+ .box{
+    background-color: white;
+    text-align: center;
+    /* border-radius: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+ .box img {
+    border-radius: 25px;
+    max-width: 100%;
+    height: 280px;
+
+}
+
+
+
+
+  .product-details{
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 25px;
+    transition: opacity 0.3s ease;
+
+}
+
+
+.brand {
+    color: #ccc;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+ .product-name{
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+
+.rate-icons{
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+ .rate-icons i {
+    color: #dbdb0f;
+}
+
+
+
+ .price-details{
+font-size: 19px;
+}
+
+ .currency{
+    color: #3F51B5;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.price{
+    color: #3F51B5;
+    
+    padding-right: 5px;
+}
+
+ .old-price{
+    color: 	#A9A9A9;
+    font-weight: bolder;
+    padding-left: 8px;
+    
+    padding-right: 5px;
+}
+
+ .old-currency{
+    color: 	#A9A9A9;
+    font-weight: bolder;
+ 
+
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .page-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    
+}
+
+.pagination .page-button:hover {
+    background-color: #ddd;
+}
+
+.pagination .page-button.active {
+    background-color: #3F51B5;
+    color: white;
+    border-color: #3F51B5;
+}
+
+
+/**popup */
+
+.popUp-overlay{
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.popUp-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2000;
+
+
+}
+
+/* Style for the popup content */
+.popItems img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+.banner-discount{
+
+    padding-top: var(--paddingTop);
+    padding-bottom: 100px;
+
+    background: url("../images/clothes.jpg");
+
+    background-size: cover;
+    position: relative;
+    height: 250px;
+    
+
+}
+
+
+.banner-discount .discount-details {
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.discount-details p:first-of-type{
+    font-size: 20px;
+}
+
+.discount-details p:nth-of-type(2){
+    font-size: 32px;
+    margin-top: 1px;
+}
+
+.discount-details button{
+    width: max-content;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+    /* font-weight: revert; */
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.discount-details button:hover {
+    background-color: #FF5F1F; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.discount-details span{
+    color: #FF5F1F;
+    font-weight: bold;
+}
+
+.banner-discount .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*****Offer /***/
+
+
+.offer{
+
+    padding-top: var(--paddingTop);
+
+}
+
+.offer .banner-box1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.offer .offer-item{
+    position: relative;
+}
+.offer .item-info{
+    position: absolute;
+    top: 20%;
+    left: 15px;
+    text-align: center;
+    color: white;
+}
+
+.offer .offer-item p{
+    font-size: 25px;
+}
+
+.offer .offer-item h4{
+    font-size: 20px;
+    color: #ccc;
+}
+
+.offer .offer-item span{
+color: orangered;
+}
+.offer .offer-item button{
+    padding: 14px 15px;
+    color: white;
+    background-color: #e0dddd8c;
+    border: transparent;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.offer .offer-item button:hover {
+    background-color: #C41E3A;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.offer .offer-item img {
+    width: 520px;
+    height: 400px;
+    filter: brightness(0.5);
+    transition: filter 0.3s ease;
+
+}
+.offer .offer-item:hover img {
+    filter: brightness(0.8); /* Lighten image on hover */
+}
+
+
+
+.offer .banner-box2{
+ display: flex;
+ gap: 18px;
+ flex-wrap: wrap;
+ padding-top: 30px;
+}
+
+.offer .offer-item2{
+position: relative;
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.offer .offer-item2:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.offer .offer-item2 img{
+    width: 350px;
+    height: 300px;
+    filter: brightness(0.8);
+}
+
+.offer .offer-item2 .item-info{
+
+    position: absolute;
+    left: 10px;
+    top: 86%;
+
+
+}
+
+.offer .offer-item2 button{
+    width: 110px;
+    /* margin-top: 80px; */
+    padding: 8px;
+    background-color: #131347;
+    border: transparent;
+    border-radius: 3px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.offer .offer-item2 button:hover {
+    background-color: #C41E3A;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.offer button:hover{
+
+    background-color:  #C41E3A;
+}
+
+
+.mobile-tablets-section{
+    padding-top: var(--paddingTop);
+    
+}
+
+
+.mobile-tablets-section .mobile-Boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+
+    padding-top: 50px;
+}
+
+
+
+/**Gaming**/
+
+.gaming-part{
+padding-top: var(--paddingTop);
+
+
+}
+
+.gaming-part a{
+
+}
+
+.gaming-part img {
+
+    border-radius: 51px;
+    max-width: 100%;
+    padding-top: 20px;
+}
+
+
+.gaming-landing{
+padding-top: var(--paddingTop);
+padding-bottom: 100px;
+background: url(../images/gamess.jpg);
+background-size: cover;
+height: 300px;
+}
+
+ .gaming-overview .gaming-banner{
+display: flex;
+padding-top: 70px;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 20px;
+
+}
+.gaming-overview img{
+
+    width: 450px;
+    height: 420px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-bottom: 30px;
+
+
+}
+
+
+
+
+/**Gaming items */
+
+
+.game-items .games-boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.game-items{
+    padding-bottom: 50px;
+}
+
+
+
+/** Tv items */
+
+.tv-product{
+    
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+}
+
+.tv-product .tv-boxes{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 50px;
+
+
+}
+
+.tv-product .Show-more{
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tv-product .Show-more button {
+    padding: 15px;
+    background-color: #3457D5;
+    color: white;
+    border: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition:  0.3s ease, transform 0.3s ease;
+}
+
+.tv-product .Show-more button:hover {
+    background-color: #2746B1; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size */
+    cursor: pointer;
+}
+
+
+
+/**Tv page */
+
+.tv-page{
+
+}
+
+.tv-page .tv-banner{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+
+.tv-banner1 img{
+    width: 700px;
+    height: 450px;
+    border-radius: 20px;
+
+}
+
+.tv-banner2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+    ;
+}
+
+.tv-banner2 img {
+    width: 320px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.infoProduct{
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+}
+
+.productDetails{
+display: flex;
+gap: 30px;
+
+}
+
+
+
+.productDetails .product_image {
+    width: 55%
+
+}
+
+.productDetails .product_image img {
+    width: 90%;
+    height: 100%;
+}
+
+
+.product_info{
+    padding-top: 50px;
+
+}
+
+.product_info .product_info_name{
+    text-transform: capitalize;
+    font-size: 28px;
+
+}
+
+.product_info  .product_info_price{
+
+    font-weight: bold;
+    font-size: 26px;
+    padding: 5px 25px;
+    background-color: white;
+    color: #008B8B;
+    border: 1px solid #008B8B;
+    border-radius: 5px;
+}
+
+.select_size{
+    padding-top: 20px;
+    display: none;
+}
+
+.select_size p{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.select_size span{
+    padding: 12px 10px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    margin-right: 20px;
+    border: 1px solid;
+    transition: 0, 3s;
+    
+
+    font-size: 20px;
+}
+
+.select_size span:hover{
+
+    background-color:#034694;
+    color: white;
+}
+
+.select_size label{
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.select_size select[name="Size"] {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.product_book {
+
+    display: flex;
+ 
+    gap: 60px;
+    padding-top: 55px;
+    align-items: center;
+}
+
+
+.product_book .quantity{
+
+}
+
+
+select[name="num"]{
+    border: 1px solid #ccc;
+    padding: 15px 15px;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+.product_info #price{
+   color: black;
+    font-size: 20px;
+    padding-right: 10px;
+    text-transform: capitalize;
+}
+
+
+.product_book  a{
+    text-decoration: none;
+    padding: 20px 65px;
+    background-color: #22313f;
+    color: white;
+    border-radius: 15px;
+    width: max-content;
+}
+
+
+
+
+
+
+
+.newsLatter {
+    padding: 50px 0;
+    background: url(../images/blue-gradient-abstract-background-empty-room-with-space-your-text-picture.jpg);
+    background-size: cover;
+    position: relative; /* Added for the animation effect */
+    overflow: hidden; /* Prevents overflow from animations */
+}
+
+.newsLatter .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsLatter .news-info {
+    animation: fadeIn 2s ease-out;
+}
+
+.news-info p {
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.news-info #one {
+    color: #ccc;
+    font-size: 20px;
+}
+
+
+
+
+.news-info #two {
+    color: orange;
+}
+
+.news-mail {
+    position: relative; /* Added to ensure button positions correctly */
+}
+
+.news-mail button {
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #008B8B;
+    cursor: pointer;
+    position: absolute;
+    right: 0; /* Align to the right side of the input field */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1; /* Ensure it appears above the input */
+}
+
+.news-mail input[type="text"] {
+    padding: 20px;
+    width: 350px;
+    border-radius: 5px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Relative positioning to ensure proper stacking context */
+    z-index: 0; /* Ensure it is beneath the button */
+}
+
+.news-mail input[type="text"]:focus {
+    border: 2px solid #008B8B;
+    box-shadow: 0 0 10px rgba(0, 139, 139, 0.5);
+}
+
+.news-mail button:hover {
+    transform: translateX(-10px); /* Moves button to the left when hovered */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Footer Base Styles */
+.footer {
+    padding: 70px 20px;
+    background-color: white /* Dark background for contrast */
+   
+}
+
+/* Footer Area Layout */
+.footer .footer-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* Increased gap for better spacing */
+   
+}
+
+/* Footer Headings */
+.footer h3 {
+    font-size: 22px; /* Larger font for headings */
+    color: black; /* Distinctive color for headings */
+    margin-bottom: 15px;
+    width: max-content;
+}
+
+/* Footer Text and Links */
+.footer p,
+.footer a {
+    color: #bdc3c7; /* Light grey for text */
+    font-size: 16px;
+    text-transform: none;
+    margin: 8px 0;
+    display: block;
+    padding: 5px;
+}
+
+.footer a:hover {
+    color: #f39c12; /* Hover color change */
+    text-decoration: none;
+}
+
+.footer a p {
+    cursor: pointer;
+    margin: 0;
+    font-size: 18px;
+    color: #899499;
+    width: max-content;
+}
+
+.app-store{
+    padding-top: 10px;
+    gap: 20px;
+    display: flex;
+}
+/* Social Icons */
+.footer .social-icons i {
+    padding-right: 15px;
+    font-size: 22px;
+    transition: color 0.3s ease;
+    color: #002244
+}
+.social-icons{
+    display: flex;
+}
+
+.footer .social-icons a:hover i {
+    color: #f39c12; /* Hover effect for social icons */
+}
+
+.order-items{
+    padding-bottom: 100px;
+
+}
+
+/* App Store and Google Play Buttons */
+.app-store-info,
+.goggle-play-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 160px;
+    height: 55px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #2ecc71;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.app-store i{
+    font-size: 30px;
+}
+
+.app-store-info:hover,
+.goggle-play-info:hover {
+    transform: translateY(-3px); /* Hover effect for buttons */
+}
+
+.app-store-info p,
+.goggle-play-info p {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Address and Contact Info Styling */
+.footer-contact #one {
+    color: #818589;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-contact #two {
+    color: #899499;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.footer .address {
+    padding-bottom: 15px;
+}
+
+
+.goggle-play-info img{
+    width: 40px;
+}
+
+.visa-icons {
+    display: flex;
+ gap: 20px;
+    padding-top: 10px;
+}
+
+.visa-icons img{
+
+    width: 40px;
+    cursor: pointer;
+
+}
+
+
+#main-table{
+
+
+    padding-top: 70px;
+}
+
+#main-table th{
+    padding: 20px;
+    border: 1px solid #ccc;
+    color: #22313f;
+    text-transform: capitalize;
+}
+
+#main-table  td{
+    padding: 10px;
+    text-align: center;
+    text-align: center;
+    color: BLACK;
+    FONT-WEIGHT: BOLD;
+    TEXT-TRANSFORM: CAPITALIZE;
+    BORDER: 1PX SOLID #cccccc7a;
+    FONT-SIZE: 18PX;
+}
+
+
+#main-table .remove {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    line-height: 2;
+    border: 1px solid #7c1414;
+    color: red;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for background color and text color */
+}
+
+#main-table .remove:hover {
+
+    background-color: #7c1414; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    animation: shake 0.5s; /* Apply shake animation on hover */
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+.order-cash{
+padding-top: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+
+.order-coupon {
+
+}
+
+.order-coupon p{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Coupon-area {
+
+}
+
+ th, td {
+    border: 1px solid;
+  }
+
+
+.Coupon-area input[type="text"]{
+    padding: 15px 30px;
+    border-radius: 3px;
+
+}
+
+tr{
+
+}
+
+#coupon{
+
+    padding: 15px 30px; background-color: #008080; color: white; border-radius: 3px;
+}
+
+
+.order-price{
+    padding: 20px;
+    background-color: ghostwhite;
+    width: 500px;
+}
+
+#total{
+    color: black !important;
+}
+.order-price p{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+#couponTable {
+    width: 100%;
+    border-collapse: collapse; /* Ensure table borders are collapsed */
+}
+
+#couponTable td {
+    font-size: 20px;
+    color: #6B5B95;
+    padding: 10px;
+    opacity: 0; /* Start with the row invisible */
+    transform: translateY(20px); /* Start with a slight offset */
+    animation: fadeInUp 0.5s ease-out forwards; /* Apply animation */
+}
+
+/* Define the fade-in and slide-up animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/******SpiritHtml Media For Responsive*/
+
+@media (max-width:768px) {
+
+    .header .main-links{
+        display: none;
+    }
+    .header .login{
+        display: none;
+    }
+    .menu-option span {
+        display: block;
+    }
+    .offer .banner-box2{
+        justify-content: center;
+    }
+    .offer .banner-box1{
+        justify-content:center ;
+    }
+    .discount-details p:nth-of-type(2) {
+        font-size: 23px !important;
+       
+
+    }
+    .offer .item-info {
+
+        left: 50px !important;
+}
+
+.newsLatter .container{
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-info p {
+    text-align: center;
+    font-size: 24px !important;
+}
+.news-info #one{
+    font-size: 17px !important;
+}
+.footer .footer-area{
+    flex-wrap: wrap;
+}
+
+
+}
+
+@media (max-width: 992px){
+
+    .footer .footer-area{
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+
+
+
+/******TV Html Media For Responsive*/
+
+@media (max-width:768px) {
+
+    .tv-banner1 img{
+
+        width: 100%;
+        height: 350px;
+    }
+
+    .tv-banner2{
+        flex-direction: row;
+    }
+    .tv-banner2 img{
+        width: 220px;
+    height: 185px;
+    }
+
+}
+
+
+@media (max-width: 992px){
+
+    .tv-banner2{
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .tv-banner1 img{
+        width: 900px !important;
+       
+        max-width: 100%;
+    }
+    .tv-banner2{
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+
+
+
+
+
+/******game Html Media For Responsive*/
+
+@media (max-width:768px) {
+
+    .gaming-landing{
+        height: 100px;
+    }
+
+}
+
+
+
+/******CARD Html Media For Responsive*/
+
+
+@media (max-width:550px) {
+    
+    .select_size span {
+        display: block;
+    margin-bottom: 10px;
+    width: max-content;
+    }
+}
+
+@media (max-width:768px) {
+
+    .productDetails{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .productDetails .product_image{
+        width: 70%;
+    }
+
+    .product_book a{
+        padding: 20px 25px;
+    }
+    .product_info .product_info_name {
+        font-size: 24px;
+    }
+}
+
+
+
+/***Order Page */
+
+
+
+
+@media (max-width:768px){
+
+    #main-table td{
+
+        font-size: 14px;
+        font-weight: normal;
+
+    }
+    .order-cash{
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width:929px){
+
+    #coupon{
+        margin-top: 10px;
+    }
+
+
+
+
+}
+
+
+
+
+
+
