@@ -42,6 +42,9 @@ body {
     }
 }
 
+
+
+
 /* Large */
 @media (min-width: 1200px) {
     .container {
@@ -244,6 +247,7 @@ background-size: cover;
 height: 600px;
 position: relative;
 padding-bottom: 100px;
+
 
 }
 
@@ -1575,6 +1579,8 @@ tr{
 }
 
 
+
+
 /******SpiritHtml Media For Responsive*/
 
 @media (max-width:768px) {
@@ -1598,7 +1604,10 @@ tr{
         font-size: 23px !important;
        
 
+      
     }
+   
+
     .offer .item-info {
 
         left: 50px !important;
